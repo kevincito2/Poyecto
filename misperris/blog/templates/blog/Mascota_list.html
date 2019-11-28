@@ -1,0 +1,32 @@
+{% extends 'blog/base_mascotas.html' %}
+{% block content %}
+
+
+<div class=container-fluid>
+    <div class="row">
+        <div class="col-xs-12">
+                <div class="mascota">
+                        <h1>Mascotas "Mis Perris"</h1>
+                        {% for mascota in mascotas %}
+                        <br>
+                        <div class="imagen_mascota">
+                            <img class="centrado" style="height:400px" src="{{ mascota.foto.url }}" alt="mascota_img">
+                        </div>
+                        <div class="nombre_mascota">
+                            <h2><a href="{% url 'blog:mascota_detail' pk=mascota.pk %}">{{ mascota.nombre }}</a></h2>
+                        </div>
+                        <div class="fecha_mascota">
+                            <p>Fecha de publicación: {{ mascota.fecha_publicacion }}</p>
+                        </div>
+                        <div class="desc_mascota">
+                            <p>{{ mascota.descripcion|linebreaksbr }}</p>
+                        </div>
+                        <br>
+                        <br>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+{% endblock %}

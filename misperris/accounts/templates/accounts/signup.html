@@ -1,0 +1,26 @@
+{% extends 'accounts/base_accounts.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="registro">
+            <h1>¡Regístrate para adoptar una mascota!</h1>
+            <br>
+            <form class="site-form" action="/accounts/signup/" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <input type="submit" name="submit" value="Registrar" onclick="registrarUsuario()">
+                <input type="button" name="back" value="Volver" onclick="location.href='/accounts/login'">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function registrarUsuario() {
+        alert("Usuario creado exitosamente");
+    }
+</script>
+
+{% endblock %}

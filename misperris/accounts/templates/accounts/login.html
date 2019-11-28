@@ -1,0 +1,46 @@
+{% extends 'accounts/base_accounts.html' %} 
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="login">
+            <h1>Ingresa y adopta una mascota</h1>
+            <br>
+            <form class="site-form" action="/accounts/login/" method="POST">
+                {% csrf_token %}
+                <div class="username">
+                    <td>{{ form.username.label_tag }}</td>
+                    <td>{{ form.username }}</td>
+                </div>
+                <br>
+                <div class="password">
+                    <td>{{ form.password.label_tag }}</td>
+                    <td>{{ form.password }}</td>
+                </div>
+                {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}"> 
+                {% endif %}
+                <br>
+                <input type="submit" value="Ingresar" class="ingreso">           
+                <br>
+            </form>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><button class="google"><span class="icon-google gg"></span>&nbsp;&nbsp;Ingresa con Google</button></a>
+            
+            <div class="account_options">
+                <br>
+                <ul>
+                    <li class="pass">
+                        <a href="{% url 'password_reset_recover' %}">¿Olvidaste tu contraseña?</a>
+                    </li>
+                    <li class="signup">
+                        <a href="{% url 'accounts:signup' %}">Si eres nuevo/a, ¡crea tu cuenta!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

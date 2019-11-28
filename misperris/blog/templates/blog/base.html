@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+<head>
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Mis Perris</title>
+    <script src="/static/Js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="/static/fontsicon/style.css">
+    <link rel="stylesheet" href="/static/css/flexboxgrid.css">
+    <link rel="stylesheet" href="" type="text/css">
+    <script src="static/Js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="/static/css/LightBox.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css">
+    
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
+    <script src="static/Js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/Style.css">
+
+</head>
+
+<body>
+    <div class="">
+        <div class="row">
+            <div class="col-xs-12">
+                <header>
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="/static/IMG/logo.png" alt="logo">
+                            </li>
+                            <li>
+                                <a href="{% url 'blog:home' %}">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#">Quiénes Somos</a>
+                            </li>
+                            <li>
+                                <a href="#">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="#">Contáctanos</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li>
+                                <a href="Registro.html">Postula AQUÍ!</a>
+                            </li>
+                            <li style="font-size:16px">
+                                <div class="connect-message">
+                                    Conectado como: {{ request.user }}
+                                </div>
+                            </li>
+                            <li>
+                                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button class="salir" type="submit">Salir</button>
+                                </form>
+                            </li>
+                            {% else %}
+                            <li style="font-size:20px">
+                                <a href="{% url 'accounts:login' %}">INGRESA</a>
+                            </li>
+                            {% endif %}
+
+
+                        </ul>
+                    </nav>
+                </header>
+                <br> {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

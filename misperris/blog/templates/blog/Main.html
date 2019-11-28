@@ -1,0 +1,269 @@
+<!DOCTYPE html >
+<html lang="es">
+{% load static %}
+
+<head>
+    {% load pwa %} {% progressive_web_app_meta %}
+    <meta name="msapplication-TileImage" content="static/icons/pet.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Mis Perris</title>
+    <script src="/static/Js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="/static/fontsicon/style.css">
+    <link rel="stylesheet" href="/static/css/flexboxgrid.css">
+    <link rel="stylesheet" href="" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="static/Js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="/static/css/LightBox.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css">
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
+
+    <script src="static/Js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/Style.css">
+    
+</head>
+
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <header>
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="/static/IMG/logo.png" alt="logo">
+                            </li>
+                            <li>
+                                <a href="#">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#">Quiénes Somos</a>
+                            </li>
+                            <li>
+                                <a href="#">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="#">Contáctanos</a>
+                            </li>
+
+                            {% if user.is_authenticated %} {% if user.is_superuser %}
+
+                            <li>
+                                <a href="{% url 'blog:mascota_list' %}">Mascotas</a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="Registro.html">Postula AQUÍ!</a>
+                            </li>
+                            {% endif %}
+
+
+                            <li style="font-size:22px" class="aviso-user">
+                                <div class="connect-message">
+                                    Conectado como: {{ request.user }}
+                                </div>
+                            </li>
+                            <li>
+                                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button class="salir" type="submit">Salir</button>
+                                </form>
+                            </li>
+
+                            {% else %}
+                            <li style="font-size:20px">
+                                <a href="{% url 'accounts:login' %}">INGRESA</a>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                    </nav>
+
+                </header>
+            </div>
+        </div>
+
+        <section id="perro">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="flexslider">
+                        {% for pets in mascotas %} {% if pets.estado == "ADOPTADO" %}
+                        <ul class="slides">
+                            <li>
+                                <img src="{{ pets.foto.url }}" alt="apolo">
+
+                                <section class="flex-caption">
+                                    <p>{{pets.descripcion}}</p>
+                                </section>
+                            </li>
+                            {% endif %} {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <footer>
+                        <ul id="contacto">
+                            <li>+569 98765431</li>
+                            <li>Rescate y adopción de perros callejeros</li>
+                            <li>
+                                <ul id="redes">
+                                    <li>
+                                        <a href="https://www.facebook.com/">
+                                            <span class="icon-facebook negro circulo"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://plus.google.com/">
+                                            <span class="icon-google-plus negro circulo"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/">
+                                            <span class="icon-instagram negro circulo"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://mail.google.com/">
+                                            <span class="icon-mail2 negro circulo"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <br>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <section id="informacion">
+                <article id="rescate">
+                    <div class="col-xs-12">
+                        <ul>
+                            <li>
+                                <br>
+                                <h2>RESCATE</h2>
+                            </li>
+                            <li>
+                                <h3>ETAPA UNO</h3>
+                            </li>
+                            <hr class="linea">
+                            <li>
+                                <p> Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos
+                                    <br> y los preparamos para buscarles un hogar.</p>
+                                <br>
+                            </li>
+                            <li>
+                                <img src="/static/IMG/rescate.jpg" alt="rescate">
+                            </li>
+                        </ul>
+
+                    </div>
+                </article>
+            </section>
+
+
+            <aside id="asidemain">
+
+                <div class="col-xs-12">
+                    <ul>
+                        <li>
+                            <br>
+                            <img src="/static/IMG/crowfunding.jpg" alt="crowdfunding">
+                        </li>
+                        <li>
+                            <br>
+                            <h2>CROWDFUNDING</h2>
+                        </li>
+                        <li>
+                            <h3>FINANCIAMIENTO</h3>
+                        </li>
+                        <hr class="linea">
+                        <li>
+                            <p>
+                                Sigue nuestras redes sociales para informarte acerca de las diversas campañas y
+                                <br> actividades que realizamos para obtener financiamiento para seguir ayudando.
+                            </p>
+                        </li>
+                        <li>
+                            <br>
+                            <br>
+                            <a href="#" id="Campañas">
+                                <b>CAMPAÑAS</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="row center-xs">
+        <ul class="galeria" id="fotografias">
+            <div class="col-xs-6">
+                <br>
+                <h2>Disponibles</h2>
+                <hr>
+                <br> {% for pets in mascotas %} {% if pets.estado == "DISPONIBLE" %}
+                <li class="galeria__item">
+                    <h3>{{pets.nombre}}</h3>
+                    <br>
+                    <img src="{{pets.foto.url}}" class="galeria__img">
+                    <section class="descripcion_perro">{{ pets.descripcion }}</section>
+                </li>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="col-xs-6">
+                <br>
+                <h2>Rescatados</h2>
+                <hr>
+                <br> {% for pets in mascotas %} {% if pets.estado == "RESCATADO" %}
+                <li class="galeria__item">
+                    <h3>{{pets.nombre}}</h3>
+                    <br>
+                    <img src="{{pets.foto.url}}" class="galeria__img" width="284">
+                    <section class="descripcion_perro">{{ pets.descripcion }}</section>
+                </li>
+                {% endif %} {% endfor %}
+            </div>
+
+        </ul>
+
+
+
+
+
+        <script src="/static/Js/modal.js"></script>
+    </section>
+    <div class="row">
+        <div class="col-xs-12">
+            <footer id="piedepagina">
+                <p>Desarrollo Web y Mobile</p>
+                <br>
+            </footer>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

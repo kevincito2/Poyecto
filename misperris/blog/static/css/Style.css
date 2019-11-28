@@ -1,0 +1,479 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+header{
+    background: #4fb98d;
+    font-family: 'Lato', sans-serif;
+}
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #f7faf7;
+    padding: 0.8vw;
+}
+
+#margencolor {
+    background: #4fb98d;
+}
+
+
+#perro {
+    background: #4fb98d;
+    justify-content: space-between;
+}
+
+#perro ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.negro {
+    color: #4fb98d;
+}
+
+#imagen{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#contacto{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    list-style: none;    
+    display: flex;  
+    justify-content: space-between;  
+}
+
+#contacto li a {
+    text-decoration: none;
+}
+
+#contacto span{
+    font-size: 1.3em;
+}
+
+header nav ul {
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    margin-right: 3%;
+    float: left;
+}
+
+header nav ul li a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover {
+    background-color: #ffffff;
+    color: #4fb98d;
+}
+
+#asidemain {
+    float: right;
+    text-align: left;
+    width: 45%;
+    font-family: 'Lato', sans-serif;
+}
+
+#asidemain h3{
+    color: #b1b1b1;
+    font-weight: 300;
+    font-size: 0.9375rem;
+}
+
+hr {
+    display: inline-block;
+    width: 10%;
+    border-color: #9b9b9b;
+    border-width: 1px;
+    border-style: solid;
+    margin: 20px 0;
+}
+
+#asidemain ul li img{
+    width: 25vw;
+}
+
+#asidemain li {
+    margin-right: 50%;
+}
+
+#informacion {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#rescate {
+    text-align: right;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+#rescate ul {
+    float: left;
+    margin: 3%;
+    list-style: none;
+}
+
+#rescate img {
+    width: 30vw;
+}
+
+#rescate h3 {
+    color: #b1b1b1;
+    font-weight: 300;
+    font-size: 0.9375rem;
+}
+
+#Campañas { 
+    color: #000000;
+    border: solid;
+    margin: 0px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#asidemain ul {
+    list-style: none;
+}
+
+#piedepagina {
+    font-family: 'Lato', sans-serif;
+    background: #d5e0dc;
+    color: #000000;
+    padding: 2rem 0;
+}
+
+#piedepagina p {
+    margin-left: 1%;
+}
+
+
+#redes ul {
+    list-style: none;
+}
+
+#redes ul li {
+    display: inline-block;  
+}
+
+.flexslider p{
+    position: absolute;
+    display: block;
+    bottom: 50px;
+    left: 40px;
+    padding: 5px;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+#formulario{
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    width: 100vw;
+    height: 100vh;
+    float: center;
+}
+
+.form-postulante {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 580px;
+	margin-left:-250px;
+	height: 320px;
+    margin-top: -150px;
+    padding: 1%;
+	border: 2px solid #808080;
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-postulante h1 {
+    margin-left: 2%;
+}
+
+form label {
+    margin-left: 100px;
+}
+
+#formulario label {
+    color: #000;
+}
+
+.volver {
+    float: left;
+    margin-left: 1%;
+    width: 5vw;
+    height: 5vh;
+}
+
+header nav ul .connected {
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    color: #fff;
+}
+
+input[name='salir'] {
+    float: right;
+    margin-right: 3%;
+    margin-top: 1%;
+    height: 3vh;
+    width: 4vw;
+    font-size : 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.logout-link .salir {
+    float: right;
+    margin-right: 1%;
+    margin-top: 18%;
+    height: 3vh;
+    width: 4vw;
+    font-size : 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.connect-message {
+    margin-top: 6%;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header nav ul .aviso-user {
+    background: rgb(18, 99, 58);
+    border: solid 5px rgb(18, 99, 58);
+    border-radius: 0px 0px 10px 10px;
+}
+
+form input[name='submit'] {
+    height: 4vh;
+    width: 5vw;
+    margin-top: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 35%;
+}
+
+input[name='back'] {
+    justify-content: center;
+    height: 4vh;
+    width: 5vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #19bb42;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.mascota {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.mascota h1 {
+    text-align: center;
+}
+
+.centrado {
+	margin:10px auto;
+    display:block;
+    
+}
+
+.nueva_mascota h1{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.form_mascota_new {
+    text-align: center;
+    margin-left: -4%;
+    font-family: 'Lato', sans-serif;
+}
+
+.guardar {
+    height: 4vh;
+    width: 5vw;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 5%;
+}
+
+.img-apoyo {
+    text-align: center;
+}
+
+.galeria h2{
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.galeria h3 {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.galeria__item .descripcion_perro{
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+}
+
+.post-detail {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.post-detail li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.post-detail li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.modificar{
+    height: 3.5vh;
+    width: 11vw;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #ffd62a;
+    border-color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    text-shadow: 0.09em 0.09em #000;
+    margin-right: 1%;
+}
+
+.remover{
+    height: 3.5vh;
+    width: 11vw;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #ff2f2f;
+    border-color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    text-shadow: 0.09em 0.09em #000;
+}
+
+@media screen and (max-width: 870px){
+    header nav{
+
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: rgb(96, 214, 165);
+    }
+
+    header nav ul li {
+
+        display: block;
+        float: none;
+        border-bottom: 1px solid  rgba(255, 255, 255, 3)
+    }
+
+    #rescate ul li img {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 230px;
+    }
+
+    #asidemain ul{
+
+        margin-left: 3%;
+    }
+
+    #asidemain ul li {
+
+        margin: 0;
+    }
+
+    #asidemain ul li img {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 230px;
+    }
+
+    #contacto{
+        
+        visibility: collapse;
+        display: inline-flex;  
+        justify-content: unset;  
+    }
+
+    #redes{
+
+        visibility: visible;
+        display: flex;
+        margin-bottom: 10%;    
+    }
+
+    .circulo{
+
+        padding: 1.5vw;
+    }
+
+    .flexslider p{
+        position: absolute;
+        display: block;
+        bottom: 50px;
+        left: 40px;
+        padding: 5px;
+        font-size: 1em;
+        text-align: center;
+    }
+
+}
+
+

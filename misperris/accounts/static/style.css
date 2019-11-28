@@ -1,0 +1,288 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url("https://1wezoc1ei3zc3h70um3fcvye-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/shutterstock_103402628.jpg");
+    background-position-x: 70%;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+}
+
+header {
+    background: #4fb98d;
+    font-family: 'Lato', sans-serif;
+}
+
+header nav ul {
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    margin-right: 3%;
+    float: left;
+}
+
+header nav ul li a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover {
+    background-color: #ffffff;
+    color: #4fb98d;
+}
+
+.login {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	height: 360px;
+	margin-top: -150px;
+	border: 2px solid #808080;
+    padding: 1%;
+    background: #fff;
+}
+
+.registro {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	height: 290px;
+	margin-top: -150px;
+	border: 2px solid #808080;
+    padding: 1%;
+    background: #fff;
+}
+
+.site-form ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.site-form {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.account_options {
+    text-align: center;
+}
+
+.pass a:hover {
+    color: #4fb98d;
+}
+
+.signup{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.signup a {
+    color: #901b94;
+}
+
+.signup a:hover {
+    color: #4fb98d;
+}
+
+.account_options ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 2%;
+}
+
+.ingreso {
+    height: 5vh;
+    width: 6vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #710cb4;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+form li {
+    visibility: hidden;
+    
+}
+
+.helptext {
+    visibility: hidden;
+    overflow: hidden; 
+    
+}
+
+form input[name='submit'] {
+    height: 5vh;
+    width: 6vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+input[name='back'] {
+    justify-content: center;
+    height: 5vh;
+    width: 6vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #19bb42;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+input[name='name'] {
+    justify-content: center;
+    height: 5vh;
+    width: 6vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #19bb42;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.formulario #formulario-perris{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	height: 320px;
+	margin-top: -150px;
+	border: 2px solid #808080;
+    background: #fff;
+    text-align: center;
+}
+
+.pass-form #pass-form{
+    text-align: center;
+}
+
+.pass-form{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	height: 200px;
+	margin-top: -150px;
+	border: 2px solid #808080;
+    background: #fff;
+}
+
+.pass-form h1{
+    margin-top: 6%;
+}
+
+input[name='pass-recover'] {
+    justify-content: center;
+    height: 5vh;
+    width: 12vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #2277e6;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.alert-pass{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.new-pass{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+	height: 240px;
+	margin-top: -150px;
+	border: 2px solid #808080;
+    background: #fff;
+    text-align: center;
+}
+
+input[name='accept'] {
+    justify-content: center;
+    height: 5vh;
+    width: 6vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: #19bb42;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.confirm-changes{
+    text-align: center;
+}
+
+.login h2{
+    text-align: center;
+}
+
+.google{
+    height: 5vh;
+    width: 15vw;
+    margin-bottom: 3%;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(201, 49, 49);
+    border-color: #fff;
+    color: #fff;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 18%;
+}
+
+.gg{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 870px){
+    header nav {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: rgb(96, 214, 165);
+    }
+
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 3)
+    }
+}

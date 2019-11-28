@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %} 
+{% load socialaccount %}
+
+<button class="btn btn-secondary btn-block mt-5" type="submit">Ingresa</button>
+<a class="btn btn-primary btn-block" href="{% provider_login_url "facebook" method="oauth2" %}">
+   <span class="fab fa-facebook"></span>
+      Logea con facebook
+ </a>
+ 
+{% endblock %}

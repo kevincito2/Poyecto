@@ -1,0 +1,47 @@
+{% extends 'blog/base_mascotas.html' %}
+{% block content %}
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="post-detail">
+            <h1>Detalle Mascota:</h1>
+            <br>
+            <div class="img_detail">
+                <img style="height: 400px;" src="{{ mascotas.foto.url }}">
+            </div>
+            {% if mascotas.fecha_publicacion %}
+            <div class="date">
+                Fecha de publicación: {{ mascotas.fecha_publicacion }}
+            </div>
+            {% endif %}
+            <br>
+            <h1>{{ mascotas.nombre }}</h1>
+            <h2>Raza: {{ mascotas.raza }}</h2>
+            <h3>Estado: {{ mascotas.estado }}</h3>
+            <br>
+            <p>{{ mascotas.descripcion |linebreaksbr }}</p>
+            <br>
+            <ul>
+                <li class="modificar">
+                    <a class="btn btn-default" href="{% url 'blog:mascota_edit' pk=mascotas.pk %}"><span class="icon-pencil edit"></span>
+                        Modificar Mascota</a>
+                </li>
+                <li class="remover">
+                    <a class="btn btn-default" onclick="borrarMascota()" href="{% url 'blog:mascota_delete' pk=mascotas.pk %}"><span
+                            class="icon-minus delete"></span> Borrar Mascota</a>
+                </li>
+            </ul>
+            <br>
+            <input type="button" name="back" value="Volver" onclick="location.href='/Mascota_List'">
+        </div>
+    </div>
+</div>
+
+<script>
+    function borrarMascota() {
+        alert("Mascota eliminada exitosamente");
+    }
+</script>
+
+{% endblock %}
